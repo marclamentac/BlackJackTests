@@ -84,7 +84,7 @@ public class BlackjackTest
    public void testIsHitorStandGood ()
    {
       System.out.println("isHitorStand");
-      String hitter = "Hit";
+      String hitter = "hit";
       boolean expResult = true;
       boolean result = Blackjack.isHitorStand(hitter);
       assertEquals(expResult, result);
@@ -96,6 +96,15 @@ public class BlackjackTest
       System.out.println("isHitorStand");
       String hitter = "go";
       boolean expResult = false;
+      boolean result = Blackjack.isHitorStand(hitter);
+      assertEquals(expResult, result);
+   }
+
+   public void testIsHitorStandBoundary ()
+   {
+      System.out.println("isHitorStand");
+      String hitter = "Hit";
+      boolean expResult = true;
       boolean result = Blackjack.isHitorStand(hitter);
       assertEquals(expResult, result);
    }
@@ -119,6 +128,16 @@ public class BlackjackTest
       System.out.println("isYesOrNo");
       String answer = "Maybe";
       boolean expResult = false;
+      boolean result = Blackjack.isYesOrNo(answer);
+      assertEquals(expResult, result);
+   }
+
+   @Test
+   public void testIsYesOrNoBoundary ()
+   {
+      System.out.println("isYesOrNo");
+      String answer = "yes";
+      boolean expResult = true;
       boolean result = Blackjack.isYesOrNo(answer);
       assertEquals(expResult, result);
    }

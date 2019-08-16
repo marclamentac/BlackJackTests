@@ -72,7 +72,7 @@ public class WentOverTest
    public void testCheckBustBoundary ()
    {
       System.out.println("checkBust");
-      int handvalue = 21;
+      int handvalue = 22;
       boolean expResult = true;
       boolean result = WentOver.checkBust(handvalue);
       assertEquals(expResult, result);
